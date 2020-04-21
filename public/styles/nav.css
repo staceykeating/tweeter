@@ -1,0 +1,27 @@
+/* html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+} */
+
+/*
+ * Global layout stuff
+ */
+
+#nav-bar {
+  font-family: 'Bungee',sans-serif;
+  width: 100vw;
+  height: 100px;
+  z-index: 9999;
+  size: 120px;
+  font-size: x-large;
+  vertical-align: center;
+  background: #c48d66;
+  color: #FFFF;
+  position: fixed;
+  padding: 1.5em;
+}
+
+element.style {
+align-items: center;}
