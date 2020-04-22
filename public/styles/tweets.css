@@ -2,28 +2,87 @@
   align-content: center;
   width: 900px;  
   margin: 0 auto; 
-  background: #f5e1d3;  
+  background: #f4f1ec; 
   z-index: 8999;  
   text-align: center ;
   border: black;
   border-radius: 10px;  
   margin-bottom: 100px;
+  margin-top: 50px;
+  opacity: 70;
  
-} 
+}   
 
-.tweets article {
+article.boxed {
   margin: 0 auto;
-  margin-top: 100px ;
   align-items: center;
   border-radius: 10px;
+  background-color: #f5e1d3;
 }
+
+
 .tweets header {
+  height: 90px;
+  padding-bottom: 0px;
+  padding-top: 25px;  
+  padding-right: 30px;
+  padding-left: 30px;
   background:#c48d66;
   top: 500px;
-  height: 150px;
   position: unset;  
   width: 900px;
   margin: 0 auto;
+  margin-top:  50px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 } 
+
+.tweets h2 {
+  display: inline;  
+  padding-right: 500px;
+  vertical-align: middle  ;
+  
+}
+.tweets img {
+  display: inherit;
+  justify-content: start;
+  height: 35px;
+  margin: 0;
+  vertical-align: middle;
+  border-style: double;
+  border-radius: 70px;
+
+}
+.tweets h4 {
+  display: inline ;
+  justify-content: space-between;
+  vertical-align: middle;
+  opacity: 0;
+}
+
+article.boxed:hover h4 {
+  opacity: 100;
+}
+
+article.boxed:hover{
+  box-shadow: 0 8px 6px -6px black;
+}
+
+
+.tweets footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;  
+  font-size: small;
+  font-family: 'Source Sans Pro',   'FontAwesome';
+}
+i.fas.fa-flag {
+  padding-right: 5px;
+}
+i.fas.fa-retweet {
+  padding-right: 5px;
+}
+.empty {
+  background-color: white;
+}
