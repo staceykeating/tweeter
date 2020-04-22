@@ -1,5 +1,29 @@
-tweets {
+.tweets {
   align-content: center;
-  margin-top: 400px;
-  width: 90vw;
+  width: 900px;  
+  margin: 0 auto; 
+  background: #f5e1d3;  
+  z-index: 8999;  
+  text-align: center ;
+  border: black;
+  border-radius: 10px;  
+  margin-bottom: 100px;
+ 
+} 
+
+.tweets article {
+  margin: 0 auto;
+  margin-top: 100px ;
+  align-items: center;
+  border-radius: 10px;
 }
+.tweets header {
+  background:#c48d66;
+  top: 500px;
+  height: 150px;
+  position: unset;  
+  width: 900px;
+  margin: 0 auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+} 
