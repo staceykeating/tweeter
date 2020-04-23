@@ -17,3 +17,26 @@ img {
   margin-top: 70px;
   margin-bottom: -10px;
 }
+
+@media all and (min-width: 1000px) {
+  header {
+  width: 40vw;
+  border-radius: 10px;
+  border-style: double;
+  height: 35vw;
+  margin-top: 200px;
+  margin-left: 50px;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  background-color: #ffe3cf;
+  line-height: 0;
+  padding: 1.5em; 
+  background-image: url(https://www.transparenttextures.com/patterns/arches.png);
+}
+  img {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+}

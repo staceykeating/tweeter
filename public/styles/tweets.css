@@ -36,13 +36,12 @@ article.boxed {
   justify-content: space-between;
   vertical-align: middle;
 
-
 } 
 
 .tweets h2 {
   justify-content: start; 
   vertical-align: middle;
-  
+  font-size: inherit;
 }
 
 #handle {
@@ -88,4 +87,31 @@ i.fas.fa-retweet {
 }
 .empty {
   background-color: white;
+}
+
+@media all and (min-width: 1000px) {
+  .tweets {
+  width: 40vw;  
+}
+  article.boxed {
+    width: 40vw;
+    margin-left: 25vw;
+  }
+  .tweets header {
+    height: 60px;
+    border-style: none;
+    width: inherit;
+    margin-top: 0;
+    margin-left: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    background:#c48d66;
+    position: inherit;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+
+}
 }
