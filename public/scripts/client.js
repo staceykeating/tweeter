@@ -1,63 +1,63 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+// /*
+//  * Client-side JS logic goes here
+//  * jQuery is already loaded
+//  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+//  */
+$(document).ready(function() {
 
-$.getJSON('/tweets')
-.then(posts => {
-})
-;
-  
 const escape = function (str) {
   let div = document.createElement('div');
-  // < => &lt; > => &gt;
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
 
 
-const createTweetElement = function(tweet) {
+const createTweetElement = function(data) {
   let $tweet = `
-   <article class= "boxed">
+   <article class= "boxed"> 
     <header>
-      <h2><img src="${escape(user.avatars)}">${escape(user.name)}" alt=""></img>></h2><h4>${escape(user.handle)}</h4>
+      <img src="${escape(data.user.avatars)}"><h2>${escape(data.user.name)}</h2><h4>${escape(data.user.handle)}</h4>
     </header>
-    <p>${escape(content.text)}</p>
+    <p>${escape(data.content.text)}</p>
     <footer>
-      <p>${escape(created_at)}</p><p><i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></p>
+      <p>${escape(data.created_at)}</p><p><i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></p>
     </footer>
   </article>
 `
 return $tweet;
 }
 
-const renderTweets = function(tweets) {
-  for (const tweet of tweets) {
-    const newTweet = createTweetElement(tweet)
-    $tweetData.prepend(newTweet)
-  }
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
-}
+const renderTweets = function(data) {
+  $('.tweets').empty();
+  for (let tweet of data) {
+    const $tweet = createTweetElement(tweet);
+    $('.tweets').prepend($tweet);
+  } 
+};
+
+//const $tweet = createTweetElement(data);
 
 
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-}
+$('form').submit(function(event) {
+  //alert('Hello');
+  event.preventDefault()  
+  //const tweet = data.content.text;
+  const self = this;
+  const formData = $(this).serialize(); 
 
+    $.post('/tweets', formData)
+    .then(() => {
+      $(self)[0].reset();
+      renderTweets(formData);
+    });
+}); 
+loadTweets();
 
-const $tweet = createTweetElement(data);
-
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
-$('#tweets-container').append($tweet);
+const loadTweets = function() {
+  $.getJSON('/tweets')
+  .then((formData) => {
+    renderTweets(formData);
+  }); 
+};
+loadTweets();
+});
