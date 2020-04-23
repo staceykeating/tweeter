@@ -1,6 +1,5 @@
 .tweets {
-  align-content: center;
-  width: 900px;  
+  width: 80vw;  
   margin: 0 auto; 
   background: #f4f1ec; 
   z-index: 8999;  
@@ -9,58 +8,62 @@
   border-radius: 10px;  
   margin-bottom: 100px;
   margin-top: 50px;
-  opacity: 70;
+  display: flex;
+  flex-direction: column;
  
 }   
 
 article.boxed {
   margin: 0 auto;
-  align-items: center;
+  margin-bottom: 100px;
+  margin-top: 100px;  
   border-radius: 10px;
   background-color: #f5e1d3;
+  
 }
 
 
 .tweets header {
-  height: 90px;
-  padding-bottom: 0px;
-  padding-top: 25px;  
-  padding-right: 30px;
-  padding-left: 30px;
+  height: 60px; 
+  padding-right: 20px;
+  padding-left: 20px;
   background:#c48d66;
-  top: 500px;
-  position: unset;  
-  width: 900px;
-  margin: 0 auto;
-  margin-top:  50px;
+  position: inherit;
+  width: 80vw;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+
+
 } 
 
 .tweets h2 {
-  display: inline;  
-  padding-right: 500px;
-  vertical-align: middle  ;
+  justify-content: start; 
+  vertical-align: middle;
   
 }
-.tweets img {
-  display: inherit;
-  justify-content: start;
-  height: 35px;
-  margin: 0;
-  vertical-align: middle;
+
+#handle {
+  opacity: 0; 
+  justify-content: end;
+}
+
+.tweets header img {
+  height: 36px;
+  width: 36px;
   border-style: double;
-  border-radius: 70px;
-
-}
-.tweets h4 {
-  display: inline ;
-  justify-content: space-between;
+  border-radius: 100px;
   vertical-align: middle;
-  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+
 }
 
-article.boxed:hover h4 {
+
+article.boxed:hover #handle {
   opacity: 100;
 }
 
