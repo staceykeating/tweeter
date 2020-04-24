@@ -3,7 +3,11 @@
 //  * jQuery is already loaded
 //  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 //  */
+
+
+
 $(document).ready(function() {
+
 
 const escape = function (str) {
   let div = document.createElement('div');
@@ -64,10 +68,12 @@ $('form').submit(function(event) {
   } 
   else if (tweetLength > 140) {
     $.post('/tweets')
+    $('.minExceed').hide();
     $('.maxExceed').show(); 
   }
   else if (tweetLength < 1) {
   $.post('/tweets')
+  $('.maxExceed').hide(); 
   $('.minExceed').show(); 
   
   }

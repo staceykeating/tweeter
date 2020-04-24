@@ -1,7 +1,7 @@
 section.new-tweet {
   margin: 0 auto;
   background-color: #f5e1d3;
-  margin-top: 70px;
+  margin-top: 5vw;
   width: 80vw;
   height: auto;   
   align-content: center;
@@ -85,8 +85,7 @@ button {
   }
   #tweet-text {
     width: 35vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin-left: 25px;
   }
 }
 

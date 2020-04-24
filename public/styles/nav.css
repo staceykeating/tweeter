@@ -10,18 +10,21 @@
  */
 
 #nav-bar {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Bungee',sans-serif;
   width: 100vw;
-  height: 100px;
+  height: auto;
   z-index: 9999;
-  size: 120px;
   font-size: x-large;
-  vertical-align: center;
   background: #c48d66;
   color: #FFFF;
   position: fixed;
   padding: 1.5em;
 }
 
+#nav-bar button {
+  background: white;
+}
 element.style {
 align-items: center;}

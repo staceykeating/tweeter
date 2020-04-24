@@ -15,8 +15,8 @@
 
 article.boxed {
   margin: 0 auto;
-  margin-bottom: 100px;
-  margin-top: 100px;  
+  margin-bottom: 5vw;
+  margin-top: 0;
   border-radius: 10px;
   background-color: #f5e1d3;
   
@@ -92,10 +92,13 @@ i.fas.fa-retweet {
 @media all and (min-width: 1000px) {
   .tweets {
   width: 40vw;  
+  margin-top: 1vw;
 }
   article.boxed {
     width: 40vw;
     margin-left: 25vw;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
   }
   .tweets header {
     height: 60px;
@@ -103,8 +106,7 @@ i.fas.fa-retweet {
     width: inherit;
     margin-top: 0;
     margin-left: 0;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 1.5em; 
     background:#c48d66;
     position: inherit;
     border-top-left-radius: 10px;
