@@ -1,12 +1,9 @@
 "use strict";
 
-const userHelper    = require("../lib/util/user-helper")
-
+const userHelper    = require("../lib/util/user-helper");
 const express       = require('express');
 const tweetsRoutes  = express.Router();
 const moments = require('moment');
-
-//const nextWeek = today.clone().add(7, 'days');
 
 
 module.exports = function(DataHelpers) {
@@ -34,7 +31,7 @@ module.exports = function(DataHelpers) {
         text: req.body.text
       },
       created_at: moments().add(17, 'hours').calendar()
-    };  
+    };
 
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
@@ -46,4 +43,4 @@ module.exports = function(DataHelpers) {
   });
 
   return tweetsRoutes;
-}
+};
