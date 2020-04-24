@@ -30,7 +30,7 @@ module.exports = function(DataHelpers) {
       content: {
         text: req.body.text
       },
-      created_at: moments().add(17, 'hours').calendar()
+      created_at: moments().add(17, 'hours').calendar() //posts with format of: Today at 0:00 PM
     };
 
     DataHelpers.saveTweet(tweet, (err) => {
@@ -41,6 +41,6 @@ module.exports = function(DataHelpers) {
       }
     });
   });
-
+  
   return tweetsRoutes;
 };
