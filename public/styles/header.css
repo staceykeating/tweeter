@@ -1,8 +1,7 @@
+/*display for avatar and name*/ 
 header {
-  box-sizing: border-box;
-  height: 400px;
+  height: 410px;
   width: 100vw; 
-  padding: 5vw;
   align-items: center;
   text-align: center;
   position: fixed;
@@ -12,13 +11,12 @@ header {
   background-image: url(https://www.transparenttextures.com/patterns/arches.png);
 }
 
-
-
 img {
   margin-top: 80px;
   margin-bottom: -15px;
 }
 
+/* responsive design mods*/ 
 @media all and (min-width: 1000px) {
   header {
   width: 40vw;
@@ -28,16 +26,12 @@ img {
   height: 35vw;
   margin-top: 200px;
   margin-left: 50px;
-  align-items: center;
-  text-align: center;
-  position: fixed;
-  background-color: #ffe3cf;
-  line-height: 0;
-  background-image: url(https://www.transparenttextures.com/patterns/arches.png);
+}
+  header:hover {
+  box-shadow: -2px 0px 18px 9px rgba(196,141,102,0.52);
 }
   img {
     margin-top: 0px;
     margin-bottom: 0px;
   }
-
 }
