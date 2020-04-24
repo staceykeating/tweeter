@@ -6,6 +6,7 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
+  //template to add tweets into tweet section of html\\
   const createTweetElement = function(data) {
     let $tweet = `
     <article class= "boxed">
@@ -44,10 +45,10 @@ $(document).ready(function() {
     const tweetLength = tweetText.length;
     const counter = $(this).closest("section.new-tweet").find("#counter");
 
-    if (tweetLength <= 140 && tweetLength > 0) {
+    if (tweetLength <= 140 && tweetLength > 0) { //make sure tweet is within char limits
       $.post('/tweets', formData)
         .then(() => {
-          $('.minExceed').hide();
+          $('.minExceed').hide();               //hide error messages if previous errors before submit
           $('.maxExceed').hide();
           $(self)[0].reset();
           counter.text(140);
@@ -66,7 +67,7 @@ $(document).ready(function() {
   
   loadTweets();
   
-  $(".form-toggle").click(function() {
+  $(".form-toggle").click(function() {                //toggle button on navigation bar collapse/expand new tweet box
     if ($('.new-tweet').css('display') == 'none') {
       $('.new-tweet').show();
     } else {
