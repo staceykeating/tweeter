@@ -1,4 +1,5 @@
 section.new-tweet {
+  display: none;
   margin: 0 auto;
   background-color: #f5e1d3;
   margin-top: 5vw;
@@ -19,8 +20,8 @@ section.new-tweet {
   height: 60px;
   border-bottom: 2px solid black;
   margin-bottom: 10px;
-  margin-left: 48px;
-  margin-right: 48px; 
+  margin-left: 4vw;
+  margin-right: 5vw;
   resize: none;   
   line-height: 80px;
   outline: none;
