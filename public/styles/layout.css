@@ -10,16 +10,11 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-
 }
     
 .container {
@@ -27,7 +22,6 @@ body {
   width: 90vw;
   margin: 0 auto;
   background-color: #f4f1ec;
-
 }
 
 /*
