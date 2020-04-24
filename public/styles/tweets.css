@@ -1,10 +1,9 @@
+/*whole tweet section*/
 .tweets {
   width: 80vw;  
   margin: 0 auto; 
-  background: #f4f1ec; 
   z-index: 8999;  
   text-align: center ;
-  border: black;
   border-radius: 10px;  
   margin-bottom: 100px;
   margin-top: 50px;
@@ -13,15 +12,15 @@
  
 }   
 
+
+/*individual tweet boxes*/ 
 article.boxed {
   margin: 0 auto;
   margin-bottom: 5vw;
   margin-top: 0;
   border-radius: 10px;
   background-color: #f5e1d3;
-  
 }
-
 
 .tweets header {
   height: 60px; 
@@ -34,20 +33,7 @@ article.boxed {
   border-top-right-radius: 10px;
   display: flex;
   justify-content: space-between;
-  vertical-align: middle;
-
 } 
-
-.tweets h2 {
-  justify-content: start; 
-  vertical-align: middle;
-  font-size: inherit;
-}
-
-#handle {
-  opacity: 0; 
-  justify-content: end;
-}
 
 .tweets header img {
   height: 36px;
@@ -58,18 +44,20 @@ article.boxed {
   margin-top: 0;
   margin-bottom: 0;
   margin-right: 10px;
-
 }
 
-
-article.boxed:hover #handle {
-  opacity: 100;
+.tweets h2 {
+  font-size: inherit;
 }
 
-article.boxed:hover{
-  box-shadow: 0 8px 6px -6px black;
+#handle {
+  justify-content: end;
+  opacity: 0;
 }
 
+.tweets p {
+  opacity: .5;
+}
 
 .tweets footer {
   display: flex;
@@ -79,16 +67,32 @@ article.boxed:hover{
   font-size: small;
   font-family: 'Source Sans Pro',   'FontAwesome';
 }
+
 i.fas.fa-flag {
   padding-right: 5px;
 }
+
 i.fas.fa-retweet {
   padding-right: 5px;
 }
-.empty {
-  background-color: white;
+
+
+/*hover features*/ 
+article.boxed:hover #handle {
+  opacity: 1;
 }
 
+article.boxed:hover{
+  box-shadow: -2px 0px 18px 9px rgba(196,141,102,0.52);
+  opacity: 1;
+}
+
+article.boxed:hover p {
+  opacity: 1;
+}
+
+
+/* responsive design mods */ 
 @media all and (min-width: 1000px) {
   .tweets {
   width: 40vw;  
