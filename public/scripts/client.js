@@ -80,4 +80,13 @@ $('form').submit(function(event) {
 }); 
 loadTweets();
 
+$(".form-toggle").click(function() {
+    if ($('.new-tweet').css('display') == 'none') {
+      $('.new-tweet').show();
+    } else {
+      $('.new-tweet').hide();
+    }
+  });
+
+
 });
